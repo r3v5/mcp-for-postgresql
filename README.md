@@ -25,25 +25,33 @@
 ## Getting started
 > this tutorial runs on MAC
 
-1.  Clone the repo: 
+1.  Clone the repo:
+
 ```git clone https://github.com/r3v5/mcp-for-postgresql.git```
 
 2. Create local venv and activate it:
+
 ```cd mcp-for-postgresql```
-```uv venv .venv --python 3.12```    
+
+```uv venv .venv --python 3.12```
+
 ```source .venv/bin/activate```     
 
 3. Install requirements:
- ```uv pip install -r requirements.txt```
+
+```uv pip install -r requirements.txt```
  
 4. Start your Postgres server:
+
 ```brew services start postgresql```
 
 5. Allow permission to execute scripts to create PostgreSQL database and insert data:
+
 ```chmod +x scripts/create_db_and_insert_data.sh```
 
 6. Check **my_customers** db:
- ```psql my_customers``` 
+
+```psql my_customers``` 
  
 You should see the **customers** table
 ```
@@ -62,6 +70,7 @@ my_customers=#
 
 
 7. Try to see what data is stored in this table:
+
 ```my_customers=# select * from customers;```
 
 ```
@@ -76,6 +85,7 @@ id |   customer_id    | first_name | last_name  |             company           
 ```
 
 8. Add MCP server to Cursor settings and enable MCP tools:
+
 Eg. json file:
 ```
 {
@@ -93,6 +103,7 @@ Eg. json file:
 ```
 
 9. You should see green indicator:
+
 ![](https://raw.githubusercontent.com/r3v5/mcp-for-postgresql/main/docs/mcp-tools.png)
 
 10. Open your AI Agent in Cursor and choose GPT-5 or other model you wish and ask any questions that relate to your PostgreSQL server knowledge base:
